@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>test</name>
+  <version>0.0.0</version>
+  <description>The test package</description>
+  <license>TODO</license>
+  <maintainer email="kevin@todo.todo">kevin</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>xmlrpcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>moveit_msgs</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>moveit_visual_tools</depend>
+  <depend>moveit_core</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>sensor_msgs </depend>
+  <build_depend> message_generation </build_depend>
+  <depend> message_runtime </depend>
+
+  
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+
+  </export>
+</package>

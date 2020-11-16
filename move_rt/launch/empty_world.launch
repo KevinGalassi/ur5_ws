@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="limited" default="true"/>
+  <arg name="paused" default="false"/>
+  <arg name="gui" default="true"/>
+  
+  <env name="GAZEBO_MODEL_PATH" value="/home/luca/REMODEL_ws/src/uc1_simulation/models/"/>
+
+  
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!--arg name="world_name" value="$(find wm_ur5_simulation)/worlds/myWMLab.world"/-->
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  
+  <node name="spawn_gazebo_Table" pkg="gazebo_ros" type="spawn_model" args="-sdf -file $(find uc1_simulation)/models/Table/model.sdf -model Table -x 0.0 -y 0.0 -z 0.0" respawn="false" output="screen" />
+  
+  <node name="spawn_gazebo_Q1" pkg="gazebo_ros" type="spawn_model" args="-sdf -file $(find uc1_simulation)/models/Q1/model.sdf -model Q1 -x 0.0 -y 0.0 -z 0.651  -Y 0" respawn="false" output="screen" />
+  
+  
+
+</launch>
